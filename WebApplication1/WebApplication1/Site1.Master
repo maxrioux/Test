@@ -15,6 +15,10 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         Blablabla
 
+            1234
+
+            asdddd
+
             Super
         </asp:ContentPlaceHolder>
     </div>
