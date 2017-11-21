@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47D03461-BF6E-4AD2-86B7-9798CAC1868C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>object_data_source</RootNamespace>
+    <AssemblyName>object data source</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\EmployeesDB.mdf" />
+    <Content Include="App_Data\EmployeesDB_log.LDF">
+      <DependentUpon>EmployeesDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\GuestbookDB.mdf" />
+    <Content Include="App_Data\GuestbookDB_log.LDF">
+      <DependentUpon>GuestbookDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\MyDatabase.mdf" />
+    <Content Include="App_Data\MyDatabase_log.ldf">
+      <DependentUpon>MyDatabase.mdf</DependentUpon>
+    </Content>
+    <None Include="App_WebReferences\LocalServices\TimeService.disco" />
+    <Content Include="ExplicitShowMovies.aspx" />
+    <Content Include="HandleErrors.aspx" />
+    <Content Include="ShowAdventureMovies.aspx" />
+    <Content Include="ShowConflictDetection.aspx" />
+    <Content Include="ShowDSPaging.aspx" />
+    <Content Include="ShowDSSorting.aspx" />
+    <Content Include="ShowFilteredMovies.aspx" />
+    <Content Include="ShowGuestbook.aspx" />
+    <Content Include="ShowLINQ.aspx" />
+    <Content Include="ShowMovieCollection.aspx" />
+    <Content Include="ShowMovieDataReader.aspx" />
+    <Content Include="ShowMovieDataSet.aspx" />
+    <Content Include="ShowMovieDataSource.aspx" />
+    <Content Include="ShowMovies.aspx" />
+    <Content Include="ShowMoviesByCategory.aspx" />
+    <Content Include="ShowPagePropertyParameter.aspx" />
+    <Content Include="ShowUIPaging.aspx" />
+    <Content Include="ShowUISorting.aspx" />
+    <Content Include="ShowUsernameParameter.aspx" />
+    <Content Include="ShowWebService.aspx" />
+    <Content Include="TimeService.asmx" />
+    <Content Include="UpdateEmployees.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Employees.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Employees.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MyDatabase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDatabase.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\ConflictedMovies.cs" />
+    <Content Include="App_Code\Employee.cs" />
+    <Content Include="App_Code\EmployeeData.cs" />
+    <Content Include="App_Code\Employees.designer.cs" />
+    <Content Include="App_Code\EmployeesDSSorting.cs" />
+    <Content Include="App_Code\EmployeesUISorting.cs" />
+    <Content Include="App_Code\FilterMovies.cs" />
+    <Content Include="App_Code\Guestbook.cs" />
+    <Content Include="App_Code\GuestbookComponent.cs" />
+    <Content Include="App_Code\InsertMovie.cs" />
+    <Content Include="App_Code\MovieCategories.cs" />
+    <Content Include="App_Code\MovieCollection.cs" />
+    <Content Include="App_Code\MovieDataReader.cs" />
+    <Content Include="App_Code\MovieDataSet.cs" />
+    <Content Include="App_Code\MovieDataSource.cs" />
+    <Content Include="App_Code\Movies.cs" />
+    <Content Include="App_Code\MoviesByCategory.cs" />
+    <Content Include="App_Code\MoviesLINQPaging.cs" />
+    <Content Include="App_Code\MovieUIPaging.cs" />
+    <Content Include="App_Code\MyDatabase.designer.cs" />
+    <Content Include="App_Code\PagePropertyParameter.cs" />
+    <Content Include="App_Code\UsernameParameter.cs" />
+    <Content Include="App_Code\Employees1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employees.dbml</DependentUpon>
+    </Content>
+    <Content Include="App_Code\MyDatabase1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDatabase.dbml</DependentUpon>
+    </Content>
+    <Compile Include="Employees.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employees.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MyDatabase.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDatabase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Employees.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Employees1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Code\MoviesDSPaging.cs.exclude" />
+    <Content Include="App_Code\MyDatabase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDatabase1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App_WebReferences\LocalServices\TimeService.discomap" />
+    <None Include="App_WebReferences\LocalServices\TimeService.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Code\Employees.dbml.layout">
+      <DependentUpon>Employees.dbml</DependentUpon>
+    </None>
+    <None Include="App_Code\MyDatabase.dbml.layout">
+      <DependentUpon>MyDatabase.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Employees.dbml.layout">
+      <DependentUpon>Employees.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MyDatabase.dbml.layout">
+      <DependentUpon>MyDatabase.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>43162</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:43162/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
